@@ -4,7 +4,7 @@ Mô phỏng robot gắp, lắp ráp và kiểm tra chất lượng trên băng c
 
 ## Chạy demo
 
-Python 3.10+; cần trình biên dịch C++ nếu hệ điều hành không có wheel PyBullet phù hợp. Chạy mọi lệnh từ thư mục gốc repository:
+Python 3.10+ (đã chạy với Python 3.11). Chạy mọi lệnh từ thư mục gốc repository:
 
 ```bash
 python3 -m venv .venv
@@ -14,6 +14,16 @@ python -m f1_assembly.demo_pick --station 1 --seconds 60 --seed 0
 python -m f1_assembly.main --seconds 120 --seed 0
 ```
 
+Nếu cài PyBullet bằng pip bị lỗi biên dịch trên macOS ARM, dùng gói dựng sẵn từ conda-forge. Môi trường đã dùng để đo trên máy này là `f1sim`, Python 3.11.17, metadata PyBullet 3.2.5 (gói conda 3.25), NumPy 2.4.6:
+
+```bash
+conda env create -f environment.yml
+conda activate f1sim
+python -m f1_assembly.demo_pick --seconds 60 --seed 0
+```
+
+![Demo một tay Panda gắp linh kiện trên băng chuyền](evidence/demo_preview.png)
+
 Chạy không mở cửa sổ và lưu bằng chứng thực nghiệm:
 
 ```bash
@@ -21,6 +31,8 @@ python evaluate.py
 ```
 
 Video dự phòng có sẵn: [demo_pick_tracker.mp4](demo_pick_tracker.mp4). Video minh họa vòng gắp–đặt một tay, không chứng minh cả dây chuyền lắp đủ xe. Xem [báo cáo](REPORT.md), [log thí nghiệm](evidence/) và [kịch bản demo 10 phút](DEMO.md).
+
+Kết quả seed 0: ca một tay 60 giây có 9 lần gắp và 7 lần thả trên 10 linh kiện, sai số dự đoán trung bình 6.6 mm (n=9); khi trượt 20%, sai số tăng lên 24.3 mm (n=6). Ca dây chuyền 120 giây gắn được 4/13 lần thử, chưa có xe đủ sáu bộ phận. Báo cáo phân tích cả các lỗi này và giới hạn của phép đo.
 
 ## Kiến trúc và trụ cột Track 4
 
@@ -58,7 +70,7 @@ flowchart LR
 
 Đội số 3: **HAHAHAHAHAHAHAHAHAHAHAHAHAHA**, đơn vị **Vin Robotics**.
 
-- **Trưởng nhóm: Bùi Đức Thông** (được xác nhận trực tiếp ngày 16/10/2026).
+- **Trưởng nhóm: Bùi Đức Thông**.
 - **Thành viên: Lê Tuấn Hưng**.
 
 Nguồn danh sách: [bảng theo dõi Capstone, hàng 12–15](https://docs.google.com/spreadsheets/d/1SIAlLnI0hAkd9iOahF4LYF3umY8kNGbkJhNGj62YAio/edit?gid=1696765330#gid=1696765330&range=B12:G15). Hai ô thành viên còn lại đang trống tại thời điểm đối chiếu. GitHub và phân công của thành viên chưa được cung cấp. Đề bài yêu cầu 3–5 người, nên nhóm cần hoàn thiện danh sách với ban tổ chức.

@@ -1,0 +1,52 @@
+{
+  "python": "3.11.17 (main, Oct 13 2026, 16:38:53) [Clang 21.1.8 ]",
+  "platform": "macOS-26.0.1-arm64-arm-64bit",
+  "pybullet": "3.2.5",
+  "numpy": "2.4.6",
+  "runs": [
+    {
+      "case": "pick_baseline",
+      "command": [
+        "-m",
+        "f1_assembly.demo_pick",
+        "--direct",
+        "--seconds",
+        "60",
+        "--seed",
+        "0"
+      ],
+      "returncode": 0,
+      "wall_seconds": 83.929
+    },
+    {
+      "case": "pick_slip_20pct",
+      "command": [
+        "-m",
+        "f1_assembly.demo_pick",
+        "--direct",
+        "--seconds",
+        "60",
+        "--seed",
+        "0",
+        "--slip",
+        "0.20"
+      ],
+      "returncode": 0,
+      "wall_seconds": 78.992
+    },
+    {
+      "case": "assembly_baseline",
+      "command": [
+        "-m",
+        "f1_assembly.main",
+        "--direct",
+        "--seconds",
+        "120",
+        "--seed",
+        "0"
+      ],
+      "returncode": 0,
+      "wall_seconds": 336.725
+    }
+  ]
+}

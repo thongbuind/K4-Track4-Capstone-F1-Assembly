@@ -1,0 +1,23 @@
+[t=  5.00s] trạm 01 grasped front_wing
+[t=  7.05s] trạm 01 released front_wing
+[t=  9.78s] trạm 01 grasped front_wing
+[t= 11.75s] trạm 01 released front_wing
+[t= 27.03s] trạm 01 grasped front_wing
+[t= 29.07s] trạm 01 released front_wing
+[t= 32.02s] trạm 01 grasped front_wing
+[t= 33.85s] trạm 01 released front_wing
+[t= 36.85s] trạm 01 grasped front_wing
+[t= 38.87s] trạm 01 released front_wing
+[t= 45.07s] trạm 01 grasped front_wing
+[t= 45.22s] trạm 01 dropped_in_lift front_wing
+[t= 48.18s] trạm 01 grasped front_wing
+[t= 50.10s] trạm 01 released front_wing
+[t= 52.73s] trạm 01 grasped front_wing
+[t= 54.67s] trạm 01 released front_wing
+[t= 57.13s] trạm 01 grasped front_wing
+[t= 57.27s] trạm 01 dropped_in_lift front_wing
+
+Kết quả: {'spawned': 10, 'grasped': 9, 'placed': 7, 'failed': 2} | bộ đếm world: {'bodies': 0, 'surplus': 0, 'output': 0, 'dropped': 0}
+Sai số dự đoán lúc gắp: trung bình 6.6 mm, lớn nhất 17.6 mm (n = 9)
+Detector: 13.2 ms / ảnh (n = 300), số track: 10
+pybullet build time: Oct 21 2025 17:04:55

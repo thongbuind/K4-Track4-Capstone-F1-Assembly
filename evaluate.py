@@ -1,10 +1,12 @@
 """Run reproducible simulation experiments and retain unedited output logs."""
 import json
+from datetime import datetime
 import platform
 from pathlib import Path
 import subprocess
 import sys
 import time
+from zoneinfo import ZoneInfo
 from importlib.metadata import version
 
 ROOT = Path(__file__).resolve().parent
@@ -18,7 +20,8 @@ CASES = {
 
 def main():
     OUT.mkdir(exist_ok=True)
-    metadata = {"python": sys.version, "platform": platform.platform(),
+    metadata = {"started_at": datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).isoformat(),
+                "python": sys.version, "platform": platform.platform(),
                 "pybullet": version("pybullet"), "numpy": version("numpy"), "runs": []}
     for name, (module, *args) in CASES.items():
         cmd = [sys.executable, "-m", f"f1_assembly.{module}", "--direct", *args]

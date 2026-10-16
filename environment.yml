@@ -1,0 +1,7 @@
+name: f1sim
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pybullet=3.25
+  - numpy=2.4.6

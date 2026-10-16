@@ -1,0 +1,33 @@
+[t= 25.10s] trạm 02 pick_timeout
+[t= 28.60s] trạm 02 pick_fail_descend
+[t= 50.53s] trạm 02 lắp rear_wing  HỎNG lệch  23.7 mm  2.9°
+[t= 55.83s] trạm 02 pick_fail_descend
+[t= 58.03s] trạm 01 lắp front_wing HỎNG lệch  19.8 mm  4.3°
+[t= 63.28s] QC xe 1: FAIL thiếu=['front_wing', 'rear_wing', 'FL', 'FR', 'RL', 'RR'] | thật đang gắn 0/6
+[t= 68.72s] trạm 06 pick_timeout
+[t= 69.05s] trạm 03 lắp FL         HỎNG lệch  57.4 mm  0.0°
+[t= 76.62s] trạm 03 lắp FL         HỎNG lệch  52.1 mm  0.0°
+[t= 81.32s] trạm 03 pick_timeout
+[t= 81.48s] trạm 04 lắp FR         HỎNG lệch 116.4 mm  0.0°
+[t= 85.13s] trạm 03 lắp FL         HỎNG lệch  36.5 mm  0.0°
+[t= 85.22s] trạm 01 lắp front_wing OK  lệch   7.5 mm  8.8°
+[t= 89.78s] trạm 05 lắp RL         HỎNG lệch  38.4 mm  0.0°
+[t= 93.90s] trạm 05 lắp RL         HỎNG lệch  54.3 mm  0.0°
+[t= 95.38s] trạm 03 lắp FL         OK  lệch  13.5 mm  0.0°
+[t=101.08s] trạm 06 place_timeout
+[t=105.82s] trạm 04 pick_timeout
+[t=106.27s] trạm 06 lắp RR         HỎNG lệch  87.0 mm  0.0°
+[t=109.42s] trạm 01 lắp front_wing OK  lệch  10.1 mm  0.1°
+[t=114.28s] trạm 02 pick_timeout
+[t=115.85s] trạm 03 lắp FL         OK  lệch   6.2 mm  0.0°
+[t=117.97s] trạm 03 pick_miss
+[t=118.32s] trạm 02 pick_timeout
+
+=== Tổng kết 120 s sim ===
+Bộ đếm world: {'bodies': 6, 'surplus': 0, 'output': 0, 'dropped': 1}
+{'grasped': 14, 'attached': 4, 'attach_fail': 9, 'assembled': 0, 'fail_pick_timeout': 6, 'fail_pick_fail_descend': 2, 'qc_fail': 1, 'fail_place_timeout': 1, 'fail_pick_miss': 1}
+Sai số dự đoán lúc gắp: TB 15.2 mm, max 27.1 mm (n=14)
+Lệch khi thả vào slot: TB 40.2 mm, max 116.4 mm (n=13)
+Xe còn trong map: 6, số slot đã lắp mỗi xe: [0, 0, 1, 2, 1, 0]
+QC: 1 xe kiểm, PASS 0, khớp ground truth 1/1
+pybullet build time: Oct 21 2025 17:04:55
